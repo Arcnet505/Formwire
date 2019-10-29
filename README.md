@@ -4,11 +4,11 @@ A web application to create, store, manage and fill out forms developed using th
 
 ## Getting Started
 
-These instructions will get a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+These instructions will get a copy of the application up and running on your local machine for development and testing purposes.
 
 ### Prerequisites
 
-What things you need to install the software and how to install them
+To install the application and get it running, you will need these tools installed
 
 ```
 ✓ Node.js
@@ -32,7 +32,16 @@ git clone https://github.com/Arcnet505/Formwire.git
 npm run dev-setup
 ```
 
-3. Start the development environment
+3. Create a folder called *config* and inside this folder create a file *default.json* with the contents
+```
+{
+    "mongoURI": "MONGO_URI",
+    "jwtSecret": "TOKEN"
+}
+```
+Then replace *MONGO_URI* with a connection string to your database, and *TOKEN* with your desired secret for your Java web tokens
+
+4. Start the development environment
 
 ```
 npm run dev
@@ -40,24 +49,33 @@ npm run dev
 
 If the application did not open automatically, navigate to http://localhost:3000 in your browser of choice.
 
-## Deployment
-
-WIP
+## Browserlist error
+If you get a broswerlist error while attempting to run the code, delete the following files:
+```
+client/browserslist
+```
+```
+client/browserslist.cmd
+```
 
 ## Built With
 
-* [Node.js](https://nodejs.org/en/) - Runtime environment
-* [React](https://reactjs.org/) - Building user interface
-* [Redux](https://redux.js.org/) - Managing application state
-* [MongoDB](https://www.mongodb.com/) - Application server
-* [formBuilder](https://formbuilder.online) - Form creation
+* [Node.js](https://nodejs.org/en/)
+* [React](https://reactjs.org/)
+* [Redux](https://redux.js.org/)
+* [MongoDB](https://www.mongodb.com/)
+* [formBuilder](https://formbuilder.online)
+
+## Styled with
+
+* [MDBootstrap](https://mdbootsrap.com)
 
 ## Authors
 
 * **Anthony Clark** - *Lead Developer* - [Arcnet505](https://github.com/Arcnet505)
 * **Daniel Charlton** - *Project Manager and Assistant Developer* - [DCharlo98](https://github.com/DCharlo98)
-* **Gryff Priest** - *UI styling and Graphics Designer*
-* **Lachlan Torr** - *Technical Documentation Writer*
+* **Gryff Priest** - *UI styling and Graphics Designer* [luna-bird](https://github.com/luna-bird)
+* **Lachlan Torr** - *Technical Documentation Writer* [LachlanTorr](https://github.com/LachlanTorr)
 
 ## License
 
